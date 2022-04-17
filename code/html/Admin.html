@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,33 +8,37 @@
     <link rel="stylesheet" href="../css/Register.css">
     <title>Document</title>
 </head>
+
 <body>
-<section>
-    <div class="overlay"></div>
-    <div class="container2">
-<div class="form-container">
-    <form action="../php/Admin.php" method="post">
-        <div class="title">
-            <h1 style>Admin Login</h1>
+    <section>
+        <div class="overlay"></div>
+        <div class="container2">
+            <div class="form-container">
+                <form action="../php/Admin.php" method="post">
+                    <div class="title">
+                        <h1 style>Admin Login</h1>
+                    </div>
+                    <br>
+                    <div class="user-details">
+
+                        <b> Enter Identity Code:
+                            <input type="text" name="codeno" required="required" style="width: 200px; height: 50px;"
+                                placeholder="Identity Code.."><br><br>
+
+                            Enter your Password:</b>
+                        <input type="password" name="passans" required="required" style="width: 200px; height: 50px;"
+                            placeholder="Password"><br><br>
+
+
+                        <input type="submit" name="sub1" class="button2"><br>
+                    </div>
+
+                </form>
             </div>
-        <br>
-        <div class="user-details">
-
-           <b> Enter Identity Code:
-            <input type="text" name="codeno" required ="required" style="width: 200px; height: 50px;" placeholder="Phone Number.."><br><br>
-
-            Enter your Password:</b>
-            <input type="password" name="passans" required ="required" style="width: 200px; height: 50px;" placeholder="Security Pin"><br><br>
-
-
-            <input type="submit" name="sub1" class="button2"><br>
         </div>
-        
-    </form>
-</div>
-    </div>
-</section>    
+    </section>
 </body>
-    
+
 </body>
+
 </html>

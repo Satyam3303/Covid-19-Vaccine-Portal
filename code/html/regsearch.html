@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../css/regsearch.css">
     <link rel="stylesheet" href="../css/res.css">
 </head>
+
 <body>
     <nav>
         <input id="nav-toggle" type="checkbox">
@@ -16,7 +18,7 @@
             <li><a href="home.html">Home</a></li>
             <li><a href="vaccine.html">Vaccination</a></li>
             <li><a href="symptoms.html">Symptoms</a></li>
-            
+
             <li><a href="#contact">Contact</a></li>
         </ul>
         <label for="nav-toggle" class="icon-burger">
@@ -25,29 +27,33 @@
             <div class="line"></div>
         </label>
     </nav>
-    
+
     <div class="form-container">
         <fieldset>
-            
-        <form action="../php/regsearch.php" method="post">
-            <div class="title">
-                <h1>Booking Status</h1>
-            </div><br>
-            <div class="user-details">
 
-               <b> Enter your Phone Number:
-                <input type="text" name="u" required ="required" style="width: 200px; height: 50px;" placeholder="Phone Number.."><br><br>
+            <form action="../php/regsearch.php" method="post">
+                <div class="title">
+                    <h1>Booking Status</h1>
+                </div><br>
+                <div class="user-details">
 
-                Enter your Security Pin Code:></b>
-                <input type="password" name="v" required ="required" style="width: 200px; height: 50px;" placeholder="Security Pin"><br><br>
+                    <b> Enter your Phone Number:
+                        <input type="text" name="u" required="required" style="width: 200px; height: 50px;"
+                            placeholder="Phone Number.."><br><br>
+
+                        Enter your Security Pin Code:></b>
+                    <input type="password" name="v" required="required" style="width: 200px; height: 50px;"
+                        placeholder="Security Pin"><br><br>
 
 
-                <input type="submit" name="sub1" class="button1"><br>
-            </div>
-        </form> <br>
-        <a href="../html/Register.html"><button class="button">Didn't Register Yet? Click to register now</button></a>
+                    <input type="submit" name="sub1" class="button1"><br>
+                </div>
+            </form> <br>
+            <a href="../html/Register.html"><button class="button">Didn't Register Yet? Click to register
+                    now</button></a>
     </div>
-</fieldset>
+    </fieldset>
 
 </body>
+
 </html>
