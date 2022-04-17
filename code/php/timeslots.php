@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<head>
+
+<style><?php include '../css/Register.css' ?></style>
+</head>
 <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
 $link = mysqli_connect("localhost:3308", "root", "", "corona");
- 
+ ?>
+<div class="container">
+<?php
 // Check connection
 if($link === false){
     die("ERROR: Could not connect. " . mysqli_connect_error());
@@ -27,16 +34,16 @@ if($result = mysqli_query($link, $sql)){
        
 while($row = mysqli_fetch_array($result)){
             
-                echo "First Name" . $row['First_name'] . "<br>";
-                echo "Last Name" . $row['Last_name'] . "<br>";
-                echo "Date Of Vaccination" . $row['Preferred_Date'] . "<br>";
-                echo "Date Of Birth" . $row['Date_of_Birth'] . "<br>";
-                echo "Time Slot" . $row['Time_Slot'] . "<br>";
-                echo "Phone Number" . $row['Phone_No'] . "<br>";
-                echo "State" . $row['Indian_State'] . "<br>";
-                echo "Travelled Through COVID States" . $row['Covid_Affected'] . "<br>";
-                echo "E-mail" . $row['Email'] . "<br>";
-                echo "Gender" . $row['Gender'] . "<br>";
+                echo "<b>First Name : </b>" . $row['First_name'] . "<br>";
+                echo "<b>Last Name : </b>" . $row['Last_name'] . "<br>";
+                echo "<b>Date Of Vaccination : </b>" . $row['Preferred_Date'] . "<br>";
+                echo "<b>Date Of Birth : </b>" . $row['Date_of_Birth'] . "<br>";
+                echo "<b>Time Slot : </b>" . $row['Time_Slot'] . "<br>";
+                echo "<b>Phone Number : </b>" . $row['Phone_No'] . "<br>";
+                echo "<b>State : </b>" . $row['Indian_State'] . "<br>";
+                echo "<b>Travelled Through COVID States : </b>" . $row['Covid_Affected'] . "<br>";
+                echo "<b>E-mail : </b>" . $row['Email'] . "<br>";
+                echo "<b>Gender : </b>" . $row['Gender'] . "<br>";
 
                 echo"<hr>";
             
@@ -44,6 +51,8 @@ while($row = mysqli_fetch_array($result)){
        
         // Free result set
         mysqli_free_result($result);
+
+        
     } else{
         echo "No records matching your query were found.";
     }
@@ -54,6 +63,7 @@ while($row = mysqli_fetch_array($result)){
 // Close connection
 mysqli_close($link);
 ?>
+</div>
     
 </body>
 </html>

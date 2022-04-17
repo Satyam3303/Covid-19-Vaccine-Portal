@@ -46,6 +46,8 @@
        }
        $sql="SELECT * FROM registration WHERE Phone_No='$u' AND Pin_Code='$v'";
        $result=$conn->query($sql);
+
+       
        if ($result->num_rows > 0) 
        {
          ?>

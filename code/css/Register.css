@@ -29,6 +29,16 @@ body{
     background: rgba(85, 62, 175, 0.3);
     background-size: cover;
 } 
+
+.container10{
+  max-width: 700px;
+    max-height: 7450px;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    padding: 85px 30px;
+    border-radius: 40px;
+    opacity: 0.85
+}
 .form-container{
     max-width: 700px;
     max-height: 745px;
@@ -64,12 +74,13 @@ fieldset {
   /* text-decoration: underline; */
   width:640px;
   background: fixed;
-  background-color :rgb(0,0,50,6);
+  background: rgb(0, 0, 0);
   margin:auto;
   /* margin-top: 2px; */
   color:#ffffff;
   padding-bottom: 10px;
   text-align:center;
+  text-decoration: underline;
   border-radius:15px 15px 0px 0px;
   
   

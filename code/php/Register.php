@@ -65,7 +65,7 @@
   			echo "One Milestone Achieved for Covid Free India!<br>";
 		} 	
 		else {
-  			echo "⚠️This Phone Number is already Registered!";
+  			echo "⚠️This Phone Number or email is already Registered!";
 			?>
 			<a href="../html/Register.html">
 				<button class="button2">
