@@ -38,8 +38,18 @@
 					<input type="text" name="fname" required="required">
 					Enter Last Name:
 					<input type="text" name="lname" required="required"><br><br>
-					Preferred Date of Vaccination:
+					Preferred Date of Vaccination:	
+
 					<input type="date" name="pre" required="required"><br><br>
+					<label for="timeslot">Choose a Time Slot:</label>
+  <select name="ts" id="ts">
+	<option value="" selected disabled="disabled">--Choose A Time Slot--</option>
+    <option value="9am - 12pm">9am - 12pm</option>
+    <option value="1pm - 3pm">1pm - 3pm</option>
+    <option value="4pm - 6pm">4pm - 6pm</option>
+    
+  </select>
+
 					Date Of Birth:
 					<input type="date" name="dob" required="required"><br><br>
 					Phone Number:

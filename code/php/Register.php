@@ -15,7 +15,7 @@
 				<li><a href="../html/vaccine.html">Vaccination</a></li>
 				<li><a href="../html/symptoms.html">Symptoms</a></li>
 				
-				<li><a href="#contact">Contact</a></li>
+				<li><a href="../html/home.html#contact">Contact</a></li>
 			</ul>
 			<label for="nav-toggle" class="icon-burger">
 				<div class="line"></div>
@@ -48,6 +48,7 @@
 	$ln=$_POST['lname'];
 	$pref=$_POST['pre'];
 	$dab=$_POST['dob'];
+	$ts=$_POST['ts'];
 	$num=$_POST['num'];
 	$states=$_POST['state'];
 	$covid=$_POST['covidaf'];
@@ -56,15 +57,15 @@
 	$pins=$_POST['pin'];
 	
  //Insert
-	   $sql = "INSERT INTO Registration (First_Name, Last_Name, Preferred_Date,Date_of_Birth,Phone_No ,Indian_State, Covid_Affected ,Email,Gender,Pin_Code)
-	   VALUES ('$fn', '$ln', '$pref','$dab','$num','$states','$covid','$e','$gend','$pins')";
+	   $sql = "INSERT INTO Registration (First_Name, Last_Name, Preferred_Date,Date_of_Birth,Time_Slot,Phone_No ,Indian_State, Covid_Affected ,Email,Gender,Pin_Code)
+	   VALUES ('$fn', '$ln', '$pref','$dab','$ts','$num','$states','$covid','$e','$gend','$pins')";
 	  
 		if ($conn->query($sql) === TRUE) {
 			echo "Vaccination Dose Booked successfully ✅<br>";
   			echo "One Milestone Achieved for Covid Free India!<br>";
 		} 	
 		else {
-  			echo "⚠️This Phone Number or Email is already Registered!";
+  			echo "⚠️This Phone Number is already Registered!";
 			?>
 			<a href="../html/Register.html">
 				<button class="button2">

@@ -1,6 +1,34 @@
 <html>
+<head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style><?php include '../css/details.css' ?></style>
+<style><?php include '../css/res.css' ?></style>
+
+</head>
 
 <body>
+<nav>
+			<input id="nav-toggle" type="checkbox">
+			<div class="logo"><strong>Covid-19</strong></div>
+			<ul class="links">
+				<li><a href="../html/home.html">Home</a></li>
+				<li><a href="../html/vaccine.html">Vaccination</a></li>
+				<li><a href="../html/symptoms.html">Symptoms</a></li>
+				
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<label for="nav-toggle" class="icon-burger">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</label>
+		</nav>
+
+
+
     <?php
         $u="";
         $u=$_POST['u'];
@@ -20,25 +48,32 @@
        $result=$conn->query($sql);
        if ($result->num_rows > 0) 
        {
-        echo "Your Booking Details:-<br>";
+         ?>
+         <div class="container2">
+          <div class="watermark">
+         
+          
+           <div class="title">
+          <?php
+        echo "<u>Your Booking Details:-<br><br></u>";
         ?>
+        </div>
     
-       
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Preferred Date</th>
-            <th>Date of Birth</th>
-            <th>Phone no.</th>
-            <th>State</th>
-            <th>Travelled in Covid Affectid Zones</th>
-            <th>Email</th>
-            <th>Gender</th>
         
         <?php
         while($row = $result->fetch_assoc()) {
-          echo "First Name".$row["First_name"]."<br>"."Last Name".$row["Last_name"]."<br>"."Preffered Date of Vaccination".$row["Preferred_Date"]."</td><td>".$row["Date_of_Birth"]."</td><td>".$row["Phone_No"]."</td><td>".$row["Indian_State"]."</td><td>".$row["Covid_Affected"]."</td><td>".$row["Email"]."</td></tr>"."</td><td>".$row["Gender"]."<br>";
+
+          echo "<b>First Name: </b>".$row["First_name"]."<br>"."<b>Last Name:</b>".$row["Last_name"]."<br>"."<b>Preffered Date of Vaccination:-</b>"
+         
+          .$row["Preferred_Date"]."<br>"."<b>Date Of Birth:-</b>".$row["Date_of_Birth"]."<br>"."<b>Time Slot:-</b>".$row["Time_Slot"]."<br>"."<b>Phone Number:-</b>".$row["Phone_No"]."<br>"."<b>State:-</b>".$row["Indian_State"]."<br>"
+          
+          ."<b>Travelled To a COVID Affected Area:-</b>".$row["Covid_Affected"]."<br>"."<b>E-mail:-</b>".$row["Email"]."<br>"."<b>Gender:-</b>".$row["Gender"]."<br>";
         }
+        ?>
+        </div>
+      </div>
         
+        <?php
       }	
       
       else {
