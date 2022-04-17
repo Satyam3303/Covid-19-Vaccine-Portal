@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,700&display=swap');
+body {
+	padding: 0;
+	margin: 0;
+}
+.container {
+	position: relative;
+	width: 100%;
+    height:100vh;
+	background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/protect.jpg);
+	background-position:center;
+    background-size:cover;
+    box-sizing: border-box;
+	display:block;
+	
+	
+}
+
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Poppins', sans-serif;
+	padding: 0 5%;
+	height: 60px;
+	background-color: #000;
+}
+nav .logo {
+	float: left;
+	width: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 28px;
+	color: #fff;
+}
+
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+nav .links li {
+	list-style: none;
+}
+nav .links a {
+	display: block;
+	padding: 1em;
+	font-size: 20px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+}
+nav .links a:hover{
+	color:tomato;
+}
+#nav-toggle {
+	position: absolute;
+	top: -100px;
+}
+nav .icon-burger {
+	display: none;
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor:pointer;
+}
+nav .icon-burger .line {
+	width: 30px;
+	height: 5px;
+	background-color: #fff;
+	margin: 5px;
+	border-radius: 3px;
+	transition: all .3s ease-in-out;
+}
+.text-box{
+	width:90%;
+	color:#fff;
+	position:absolute;
+	top:50%;
+    left:50%;
+	transform: translate(-50%,-50%);
+	text-align:center;
+
+
+}
+.text-box h1{
+	font-size:90px;
+
+}
+.text-box p{
+	margin:10px 0 40px;
+	font-size:14px;
+	color:#fff;
+}
+.btn{
+	display:inline-block;
+	text-decoration:none;
+	color:black;
+	border: 1px solid #fff;
+	border-radius:20px;
+	padding: 12px 34px;
+	font-size:13px;
+	background: white;
+	position:relative;
+	cursor:pointer;
+	transition:all 0.3s ease;
+}
+.btn:hover{
+	transform:translateY(-10px);
+	border: 1px solid tomato;
+	background-color: tomato;
+	
+}
+@media screen and (max-width: 768px) {
+	nav .logo {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+	nav .links {
+		float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		justify-content: space-evenly;
+		background-color: rgba(0,0,0,.9);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+	nav .links a {
+		font-size: 20px;
+	}
+	nav :checked ~ .links {
+		bottom: 0;
+	}
+	nav .icon-burger {
+		display: block;
+	}
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+.text-box h1{
+	font-size:20px;
+}
+	
+}
+
+
+.footercontainer{
+    max-width:2170px;
+    background-color:#24262b;
+    padding:70px;
+    margin:auto;
+}
+.footerrow{
+    display:flex;
+    flex-wrap:wrap;
+}
+ul{
+    list-style:none;
+}
+.footer{
+    background-color:#24262b;
+    padding:70px 0 ;
+}
+.footer-col{
+    width:25%;
+    padding:0 15px;
+} 
+.footer-col h4{
+    font-size:18px;
+    color:#fff;
+    text-transform:capitalize;
+    margin-bottom: 30px;
+    font-weight:500;
+    position:relative;
+} 
+.poor{
+    color:teal;
+}
+.footer-col h4::before{
+    content: ' ';
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    background-color:#e91e63;
+    height:2px;
+    box-sizing:border-box;
+    width:50px; 
+}
+.footer-col ul li:not(last-child){
+    margin-bottom:10px;
+}
+.footer-col ul li a{
+    font-size:16px;
+    text-transform:capitalize;
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:300;
+    color:#bbbbbb;
+    display:block;
+    transition:all 0.3s ease;
+
+}
+.footer-col ul li a:hover{
+    color:tomato;
+    padding-left:8px;
+}
+.footer-col .sociallinks a{
+    display: inline-block;
+    height: 40px;
+    width:40px;
+    background-color:rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align:center;
+    line-height:40px;
+    border-radius:50%;
+    color:#ffffff;
+    transition:all 0.3s ease;
+}
+.footer-col .sociallinks a:hover{
+    color:#24262b;
+    background-color:#ffffff;
+}
+@media(max-width: 767px){
+	.footer-col{
+		width:50%;
+		margin-bottom:30px;
+
+	}
+}
+@media(max-width:574px){
+	.footer-col{
+		width:100%;
+		
+	}
+}

@@ -1,0 +1,124 @@
+<html>
+
+<head>
+	<title>Registration Page</title>
+</head>
+<link rel="stylesheet" href="../css/Register.css">
+<link rel="stylesheet" href="../css/res.css">
+
+<body>
+	<section>
+		<div class="overlay"></div>
+	
+	<div class="container2" >
+		<nav>
+			<input id="nav-toggle" type="checkbox">
+			<div class="logo"><strong>Covid-19</strong></div>
+			<ul class="links">
+				<li><a href="home.html">Home</a></li>
+				<li><a href="vaccine.html">Vaccination</a></li>
+				<li><a href="symptoms.html">Symptoms</a></li>
+				
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<label for="nav-toggle" class="icon-burger">
+				<div class="line"></div>
+				<div class="line"></div>
+				<div class="line"></div>
+			</label>
+		</nav>
+		<div class="form-container">
+			<form action="../php/Register.php" method="post">
+				<div class="title">
+					<h1>Registration Form</h1>
+				</div>
+				<div class="user-details">
+
+					Enter First Name:
+					<input type="text" name="fname" required="required">
+					Enter Last Name:
+					<input type="text" name="lname" required="required"><br><br>
+					Preferred Date of Vaccination:
+					<input type="date" name="pre" required="required"><br><br>
+					Date Of Birth:
+					<input type="date" name="dob" required="required"><br><br>
+					Phone Number:
+					<input type="text" name="num" required="required"><br><br>
+
+
+					<label for="state">State</label>
+					<select name="state" id="state" class="form-control" required="required">
+						<option value="" selected disabled="disabled">--Choose Your State--</option>
+						<option value="Andhra Pradesh">Andhra Pradesh</option>
+						<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+						<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+						<option value="Assam">Assam</option>
+						<option value="Bihar">Bihar</option>
+						<option value="Chandigarh">Chandigarh</option>
+						<option value="Chhattisgarh">Chhattisgarh</option>
+						<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+						<option value="Daman and Diu">Daman and Diu</option>
+						<option value="Delhi">Delhi</option>
+						<option value="Lakshadweep">Lakshadweep</option>
+						<option value="Puducherry">Puducherry</option>
+						<option value="Goa">Goa</option>
+						<option value="Gujarat">Gujarat</option>
+						<option value="Haryana">Haryana</option>
+						<option value="Himachal Pradesh">Himachal Pradesh</option>
+						<option value="Jammu and Kashmir">Jammu and Kashmir</option>
+						<option value="Jharkhand">Jharkhand</option>
+						<option value="Karnataka">Karnataka</option>
+						<option value="Kerala">Kerala</option>
+						<option value="Madhya Pradesh">Madhya Pradesh</option>
+						<option value="Maharashtra">Maharashtra</option>
+						<option value="Manipur">Manipur</option>
+						<option value="Meghalaya">Meghalaya</option>
+						<option value="Mizoram">Mizoram</option>
+						<option value="Nagaland">Nagaland</option>
+						<option value="Odisha">Odisha</option>
+						<option value="Punjab">Punjab</option>
+						<option value="Rajasthan">Rajasthan</option>
+						<option value="Sikkim">Sikkim</option>
+						<option value="Tamil Nadu">Tamil Nadu</option>
+						<option value="Telangana">Telangana</option>
+						<option value="Tripura">Tripura</option>
+						<option value="Uttar Pradesh">Uttar Pradesh</option>
+						<option value="Uttarakhand">Uttarakhand</option>
+						<option value="West Bengal">West Bengal</option>
+					</select>
+					<br>
+					<br>
+
+					<b>Have you travelled COVID affected country within last 1 month?</b>
+					<br>
+					<br>
+					<label for="yes">Yes:</label>
+					<input type="radio" name="covidaf" value="yes" required="required">
+					<label for="no">No:</label>
+					<input type="radio" name="covidaf" value="no" required="required">
+					<br> <br>
+					
+
+					Enter Email ID:
+					<input type="email" name="email" required="required"><br><br>
+
+
+					Choose Your Gender:
+					<input type="radio" name="gen" value="Male" required="required">
+					Male
+					<input type="radio" name="gen" value="Female" required="required">
+					Female<br><br>
+
+					Create a Security Pin:
+					<input type="password" name="pin" required="required">
+					<br>
+					
+					<input type="submit" name="sub1" class="button" ><br>
+					
+				</div>
+			</form>
+		</div>
+	</section>
+</body>
+
+</html>
