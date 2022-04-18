@@ -6,6 +6,7 @@
     <style>
         <?php include '../css/Register.css' ?>
     </style>
+    <title>Bookings for this Date</title>
 </head>
 <?php
 /* Attempt MySQL server connection. Assuming you are running MySQL
@@ -53,8 +54,6 @@ $link = mysqli_connect("localhost:3306", "root", "", "corona");
                     echo "<hr>";
                 }
 
-                // Free result set
-                mysqli_free_result($result);
             } else {
                 echo "No records matching your query were found.";
             }

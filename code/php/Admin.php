@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Choose Date and Time Slot</title>
   <style>
     <?php include '../css/Register.css' ?>
   </style>
@@ -33,50 +33,58 @@
   }
   $sql = "SELECT * FROM doctor WHERE ID_Code='$code' AND Passcode='$ans'";
   $result = $conn->query($sql);
-  if ($result->num_rows > 0) {
+
   ?>
-    <div class="overlay"></div>
-    <div class="form-container">
-      <form action="../php/timeslots.php" method="post">
-        <div class="title">
+  <div class="overlay"></div>
+  <div class="form-container">
+    <form action="../php/timeslots.php" method="post">
+      <div class="title">
+        <?php
+        if ($result->num_rows > 0) {
+          while ($row = mysqli_fetch_array($result)) {
+            echo "<b>Welcome : </b>" . $row['First_name'] . "<br>";
+          }
+        ?>
           <h3>Choose Date and Time</h3>
-        </div>
-        <br>
-        <div class="user-details">
-
-          Date of Vaccination:
-
-          <input type="date" name="pre" required="required"><br><br>
-          <label for="timeslot">Choose a Time Slot:</label>
-
-          <select name="ts" id="ts" required="required">
-
-            <option value="" selected disabled="disabled">--Choose A Time Slot--</option>
-            <option value="9am-12pm">9am - 12pm</option>
-            <option value="1pm-3pm">1pm - 3pm</option>
-            <option value="4pm-6pm">4pm - 6pm</option>
-
-          </select><br>
 
 
-          <input type="submit" name="sub1" class="button2"><br>
-        </div>
-      </form>
-    </div>
+      </div>
+      <br>
+      <div class="user-details">
+
+        Date of Vaccination:
+
+        <input type="date" name="pre" required="required"><br><br>
+        <label for="timeslot">Choose a Time Slot:</label>
+
+        <select name="ts" id="ts" required="required">
+
+          <option value="" selected disabled="disabled">--Choose A Time Slot--</option>
+          <option value="9am-12pm">9am - 12pm</option>
+          <option value="1pm-3pm">1pm - 3pm</option>
+          <option value="4pm-6pm">4pm - 6pm</option>
+
+        </select><br>
 
 
-  <?php
-  } else {
+        <input type="submit" name="sub1" class="button2"><br>
+      </div>
+    </form>
+  </div>
 
-  ?>
-    <script>
-      alert("Incorrect ID Code or Password");
-      location = "../html/Admin.html";
-    </script>
 
-  <?php
-  }
-  ?>
+<?php
+        } else {
+
+?>
+  <script>
+    alert("Incorrect ID Code or Password");
+    location = "../html/Admin.html";
+  </script>
+
+<?php
+        }
+?>
 
 
 </body>
