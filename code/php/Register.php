@@ -4,8 +4,6 @@
 
 	<style>
 		<?php include '../css/Register.css' ?>
-	</style>
-	<style>
 		<?php include '../css/res.css' ?>
 	</style>
 </head>
@@ -13,22 +11,22 @@
 <body>
 
 
-	<nav>
-		<input id="nav-toggle" type="checkbox">
-		<div class="logo"><strong>Covid-19</strong></div>
-		<ul class="links">
-			<li><a href="../html/home.html">Home</a></li>
-			<li><a href="../html/vaccine.html">Vaccination</a></li>
-			<li><a href="../html/symptoms.html">Symptoms</a></li>
-
-			<li><a href="../html/home.html#contact">Contact</a></li>
-		</ul>
-		<label for="nav-toggle" class="icon-burger">
-			<div class="line"></div>
-			<div class="line"></div>
-			<div class="line"></div>
-		</label>
-	</nav>
+<nav>
+				<input id="nav-toggle" type="checkbox">
+				<div class="logo"><strong>Covid-19</strong></div>
+				<ul class="links">
+					<li><a href="../html/home.html">Home</a></li>
+					<li><a href="../html/vaccine.html">Vaccination</a></li>
+					<li><a href="../html/symptoms.html">Symptoms</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><a href="../html/Admin.html">Admin Console</a></li>
+				</ul>
+				<label for="nav-toggle" class="icon-burger">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</label>
+			</nav>
 
 
 	<?php
