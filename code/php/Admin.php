@@ -63,8 +63,6 @@
           }
         ?>
           <h3>Choose Date and Time</h3>
-
-
       </div>
       <br>
       <div class="user-details">
